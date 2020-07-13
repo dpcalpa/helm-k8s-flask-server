@@ -65,14 +65,15 @@ if __name__ == "__main__":
 
 - To have MacOS or Linux
 - To have Brew installed locally.
-- Copy and paste the following command: 
-```bash
-git clone https://github.com/dpcalpa/helm-k8s-flask-server.git
-```
 
 ### 2. Enter directory to save the project
 
 Open a terminal and position yourself on the directory in which you want to locally save the project. 
+- Copy and paste the following command: 
+```bash
+git clone https://github.com/dpcalpa/helm-k8s-flask-server.git
+cd prueba-k8s-helmchart
+```
 
 ### 3. Run automated deployment script
 
