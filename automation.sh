@@ -26,7 +26,9 @@ brew install helm
 python app/tests/test.py
 
 #Make docker build to get image python-app:latest
+cd flask-server
 docker build -t $DOCKER:latest .
+cd ..
 echo "BUILD done"
 echo "IMAGE $DOCKER:latest listed"
 docker container ls
