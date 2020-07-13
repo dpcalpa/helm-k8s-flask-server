@@ -5,10 +5,11 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: python-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "latest"
+  port: 5000
 
 imagePullSecrets: []
 nameOverride: ""
@@ -38,7 +39,14 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 80
+  port: 5000
+  targetPort: 5000
+
+nodePort:
+  type: NodePort
+  port: 5000
+  targetPort: 5000
+  highPort: 30500
 
 ingress:
   enabled: false
